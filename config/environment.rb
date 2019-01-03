@@ -23,15 +23,3 @@ ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
   :database => "db/student.sqlite"
 )
-sql = <<-SQL
-CREATE TABLE IF NOT EXISTS student (
-id INTEGER PRIMARY KEY,
-name TEXT,
-genre TEXT,
-age INTEGER,
-hometown TEXT
-)
-SQL
-
-ActiveRecord::Base.connection.execute(sql)
-require_relative "./db/migrate/01_create_student.rb"
