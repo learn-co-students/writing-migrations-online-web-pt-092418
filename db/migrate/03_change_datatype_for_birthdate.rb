@@ -1,7 +1,7 @@
 class ChangeDatatype < ActiveRecord::Migration[5.1]
 
     def change 
-      change_column(table_name, column_name, type)
-      
+      change_column(students, birthday, datetime) 
+
     end
 end
